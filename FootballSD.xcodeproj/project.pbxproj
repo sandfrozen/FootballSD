@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		E980161B1F6935A100CBF3FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980161A1F6935A100CBF3FD /* AppDelegate.swift */; };
-		E980161D1F6935A100CBF3FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980161C1F6935A100CBF3FD /* ViewController.swift */; };
 		E98016201F6935A100CBF3FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E980161E1F6935A100CBF3FD /* Main.storyboard */; };
 		E98016221F6935A100CBF3FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98016211F6935A100CBF3FD /* Assets.xcassets */; };
 		E98016251F6935A100CBF3FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98016231F6935A100CBF3FD /* LaunchScreen.storyboard */; };
 		E980162D1F6935D400CBF3FD /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980162C1F6935D400CBF3FD /* Team.swift */; };
 		E980162F1F69366D00CBF3FD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980162E1F69366D00CBF3FD /* Player.swift */; };
+		E98016331F693A0E00CBF3FD /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98016321F693A0E00CBF3FD /* TeamTableViewController.swift */; };
+		E98016351F693AC000CBF3FD /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98016341F693AC000CBF3FD /* TeamTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E98016171F6935A100CBF3FD /* FootballSD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballSD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E980161A1F6935A100CBF3FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E980161C1F6935A100CBF3FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E980161F1F6935A100CBF3FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E98016211F6935A100CBF3FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E98016241F6935A100CBF3FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E98016261F6935A100CBF3FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E980162C1F6935D400CBF3FD /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		E980162E1F69366D00CBF3FD /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		E98016321F693A0E00CBF3FD /* TeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		E98016341F693AC000CBF3FD /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				E980161A1F6935A100CBF3FD /* AppDelegate.swift */,
 				E98016301F69390700CBF3FD /* Model */,
 				E98016311F69391300CBF3FD /* Controller */,
+				E98016341F693AC000CBF3FD /* TeamTableViewCell.swift */,
 				E980161E1F6935A100CBF3FD /* Main.storyboard */,
 				E98016211F6935A100CBF3FD /* Assets.xcassets */,
 				E98016231F6935A100CBF3FD /* LaunchScreen.storyboard */,
@@ -81,7 +84,7 @@
 		E98016311F69391300CBF3FD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E980161C1F6935A100CBF3FD /* ViewController.swift */,
+				E98016321F693A0E00CBF3FD /* TeamTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -160,8 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E980162F1F69366D00CBF3FD /* Player.swift in Sources */,
+				E98016351F693AC000CBF3FD /* TeamTableViewCell.swift in Sources */,
 				E980162D1F6935D400CBF3FD /* Team.swift in Sources */,
-				E980161D1F6935A100CBF3FD /* ViewController.swift in Sources */,
+				E98016331F693A0E00CBF3FD /* TeamTableViewController.swift in Sources */,
 				E980161B1F6935A100CBF3FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

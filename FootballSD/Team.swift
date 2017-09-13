@@ -9,18 +9,16 @@
 import Foundation
 import UIKit
 
-class Team {
+class Team: NSObject {
     var id: Int
     var name: String
-    var logo: UIImage
-    var starts_at: Date
+    var logo: UIImage?
+    var startsAt: Date
     
-    init(id: Int, name: String, logo: UIImage, starts_at: Date) {
+    init?(id: Int, name: String, logo: UIImage?, startsAt: Date) {
         self.id = id
         self.name = name
         self.logo = logo
-        self.starts_at = starts_at
+        self.startsAt = startsAt
     }
-    
-    
 }
