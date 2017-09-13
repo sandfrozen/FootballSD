@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import os.log
 
 class Team: NSObject {
     var id: Int
@@ -19,51 +20,36 @@ class Team: NSObject {
         self.id = id
         self.name = name
         self.logo = logo
-        
-        let dateString = startsAt
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
-        let dateFromString = formatter.date(from: dateString)
-        formatter.dateFormat = "dd-MM-yyyy, HH:mm"
-  
-        self.startsAt = formatter.string(from: dateFromString!)
+        self.startsAt = DateFormatter.polishFormat(string: startsAt)
     }
     
     init?(teamInArray: [String: AnyObject]) {
         
         guard let id = teamInArray["team_id"] as? Int else {
-            print("id not Int")
+            os_log("Unable to decode the id for a Team JSON.", log: OSLog.default, type: .debug)
             return nil
         }
         guard let name = teamInArray["team_name"] as? String else {
-            print("name not String")
+            os_log("Unable to decode the team_name for a Team JSON.", log: OSLog.default, type: .debug)
             return nil
         }
         guard let logoString = teamInArray["team_logo"] as? String else {
-            print("logoString not String")
+            os_log("Unable to decode the team_logo for a Team JSON.", log: OSLog.default, type: .debug)
             return nil
         }
         
-        let imageUrl = URL(string: "https://"+logoString)!
+        let logoUrl = URL(string: "https://"+logoString)!
+        let logo = try? UIImage(withContentsOfUrl: logoUrl)
         
-        let image = try? UIImage(withContentsOfUrl: imageUrl)
-        
-        guard let starts = teamInArray["starts_at"] as? String else {
-            print("start not String")
+        guard let startsAt = teamInArray["starts_at"] as? String else {
+            os_log("Unable to decode the starts_at for a Team JSON.", log: OSLog.default, type: .debug)
             return nil
         }
         
         self.id = id
         self.name = name
-        self.logo = image!
-        
-        let dateString = starts
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
-        let dateFromString = formatter.date(from: dateString)
-        formatter.dateFormat = "dd-MM-yyyy, HH:mm"
-        
-        self.startsAt = formatter.string(from: dateFromString!)
+        self.logo = logo!
+        self.startsAt = DateFormatter.polishFormat(string: startsAt)
     }
 }
 
