@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FootballSD/TeamTableViewController.swift"
-            timestampString = "527002387.845735"
+            timestampString = "527005226.956318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "loadSampleTeams()"
             landmarkType = "7">
          </BreakpointContent>

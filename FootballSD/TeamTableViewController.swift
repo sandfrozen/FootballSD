@@ -15,8 +15,7 @@ class TeamTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //loadSampleTeams()
-        loadTeamsAPI()
+        loadSampleTeams()
     }
 
     override func didReceiveMemoryWarning() {
@@ -116,6 +115,6 @@ class TeamTableViewController: UITableViewController {
     }
     
     private func loadTeamsAPI() {
-        print(SpaceDigitalAPI.formations())
+        
     }
 }
