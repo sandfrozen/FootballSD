@@ -15,7 +15,9 @@ class TeamTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleTeams()
+//        loadSampleTeams()
+        //loadTeams()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +51,8 @@ class TeamTableViewController: UITableViewController {
     
     @IBAction func refresh(_ sender: Any) {
         loadTeams()
+        tableView.reloadData()
+        print(teams.count)
     }
 
     /*
@@ -118,23 +122,12 @@ class TeamTableViewController: UITableViewController {
         SpaceDigitalAPI.getFormations() {
             teamsArr in
             for team in teamsArr {
-                guard let id = team["team_id"] as? Int else {
-                    break
+                if let newTeam = Team(teamInArray: team) {
+                    self.teams.append(newTeam)
                 }
-                guard let name = team["team_name"] as? String else {
-                    break
-                }
-                guard let logoString = team["team_logo"] as? String else {
-                    break
-                }
-                guard let starts = team["starts_at"] as? String else {
-                    break
-                }
-//                print(id)
-//                print(name)
-//                print(logoString)
-//                print(starts)
-//                let newTeam = Team(id: id, name: name, logo: <#T##UIImage?#>, startsAt: starts)
+                    
+                
+
             }
         }
     }

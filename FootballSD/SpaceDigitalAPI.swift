@@ -12,6 +12,7 @@ import UIKit
 class SpaceDigitalAPI {
     
     class func getFormations(callback: @escaping ([[String: AnyObject]]) -> Void)  {
+        //let semaphore = DispatchSemaphore.init(value: 0)
         guard let url = URL(string: "https://spacedigital.pl/katalog/rekrutacja/formations.php") else {
             return
         }
@@ -30,6 +31,7 @@ class SpaceDigitalAPI {
                 }
             }
         }.resume()
+        //semaphore.wait()
     }
     
     
