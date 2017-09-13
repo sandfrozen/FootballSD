@@ -15,6 +15,7 @@
 		E980162F1F69366D00CBF3FD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980162E1F69366D00CBF3FD /* Player.swift */; };
 		E98016331F693A0E00CBF3FD /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98016321F693A0E00CBF3FD /* TeamTableViewController.swift */; };
 		E98016351F693AC000CBF3FD /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98016341F693AC000CBF3FD /* TeamTableViewCell.swift */; };
+		E98016371F696C3100CBF3FD /* SpaceDigitalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98016361F696C3100CBF3FD /* SpaceDigitalAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E980162E1F69366D00CBF3FD /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E98016321F693A0E00CBF3FD /* TeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		E98016341F693AC000CBF3FD /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		E98016361F696C3100CBF3FD /* SpaceDigitalAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceDigitalAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				E98016321F693A0E00CBF3FD /* TeamTableViewController.swift */,
+				E98016361F696C3100CBF3FD /* SpaceDigitalAPI.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				E98016351F693AC000CBF3FD /* TeamTableViewCell.swift in Sources */,
 				E980162D1F6935D400CBF3FD /* Team.swift in Sources */,
 				E98016331F693A0E00CBF3FD /* TeamTableViewController.swift in Sources */,
+				E98016371F696C3100CBF3FD /* SpaceDigitalAPI.swift in Sources */,
 				E980161B1F6935A100CBF3FD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

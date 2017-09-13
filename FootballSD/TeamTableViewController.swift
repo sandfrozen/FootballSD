@@ -9,13 +9,14 @@
 import UIKit
 
 class TeamTableViewController: UITableViewController {
-
+    
     var teams = [Team]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleTeams()
+        //loadSampleTeams()
+        loadTeamsAPI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +47,10 @@ class TeamTableViewController: UITableViewController {
 
         return cell
     }
- 
+    
+    @IBAction func refresh(_ sender: Any) {
+        loadTeamsAPI()
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -109,5 +113,9 @@ class TeamTableViewController: UITableViewController {
         }
         
         teams += [team1, team2, team3]
+    }
+    
+    private func loadTeamsAPI() {
+        print(SpaceDigitalAPI.formations())
     }
 }
