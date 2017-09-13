@@ -53,11 +53,6 @@ class Team: NSObject {
             return nil
         }
         
-//        print(id)
-//        print(name)
-//        print(logoString)
-//        print(starts)
-        
         self.id = id
         self.name = name
         self.logo = image!

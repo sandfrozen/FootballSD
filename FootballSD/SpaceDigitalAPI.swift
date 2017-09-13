@@ -11,12 +11,13 @@ import UIKit
 
 class SpaceDigitalAPI {
     
-    class func getFormations(callback: @escaping ([[String: AnyObject]]) -> Void)  {
-        //let semaphore = DispatchSemaphore.init(value: 0)
+    class func getTeams(callback: @escaping ([[String: AnyObject]]) -> Void)  {
+        
         guard let url = URL(string: "https://spacedigital.pl/katalog/rekrutacja/formations.php") else {
             return
         }
         
+        let semaphore = DispatchSemaphore(value: 0)
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
             if let data = data {
@@ -30,9 +31,8 @@ class SpaceDigitalAPI {
                     print("Error in session.dataTask: \(error)")
                 }
             }
+            semaphore.signal()
         }.resume()
-        //semaphore.wait()
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
     }
-    
-    
 }

@@ -16,6 +16,7 @@
 		E98016331F693A0E00CBF3FD /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98016321F693A0E00CBF3FD /* TeamTableViewController.swift */; };
 		E98016351F693AC000CBF3FD /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98016341F693AC000CBF3FD /* TeamTableViewCell.swift */; };
 		E98016371F696C3100CBF3FD /* SpaceDigitalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98016361F696C3100CBF3FD /* SpaceDigitalAPI.swift */; };
+		E9A1981A1F69B80E00FA62FF /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A198191F69B80E00FA62FF /* Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E98016321F693A0E00CBF3FD /* TeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		E98016341F693AC000CBF3FD /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		E98016361F696C3100CBF3FD /* SpaceDigitalAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceDigitalAPI.swift; sourceTree = "<group>"; };
+		E9A198191F69B80E00FA62FF /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				E980162C1F6935D400CBF3FD /* Team.swift */,
 				E980162E1F69366D00CBF3FD /* Player.swift */,
+				E9A198191F69B80E00FA62FF /* Formatter.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				E980162F1F69366D00CBF3FD /* Player.swift in Sources */,
 				E98016351F693AC000CBF3FD /* TeamTableViewCell.swift in Sources */,
 				E980162D1F6935D400CBF3FD /* Team.swift in Sources */,
+				E9A1981A1F69B80E00FA62FF /* Formatter.swift in Sources */,
 				E98016331F693A0E00CBF3FD /* TeamTableViewController.swift in Sources */,
 				E98016371F696C3100CBF3FD /* SpaceDigitalAPI.swift in Sources */,
 				E980161B1F6935A100CBF3FD /* AppDelegate.swift in Sources */,

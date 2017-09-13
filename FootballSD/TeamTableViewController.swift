@@ -50,9 +50,10 @@ class TeamTableViewController: UITableViewController {
     }
     
     @IBAction func refresh(_ sender: Any) {
+        teams = [Team]()
         loadTeams()
         tableView.reloadData()
-        print(teams.count)
+        //print(teams.count)
     }
 
     /*
@@ -119,15 +120,12 @@ class TeamTableViewController: UITableViewController {
     }
     
     private func loadTeams() {
-        SpaceDigitalAPI.getFormations() {
+        SpaceDigitalAPI.getTeams() {
             teamsArr in
             for team in teamsArr {
                 if let newTeam = Team(teamInArray: team) {
                     self.teams.append(newTeam)
                 }
-                    
-                
-
             }
         }
     }
