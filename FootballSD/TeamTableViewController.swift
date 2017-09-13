@@ -42,7 +42,7 @@ class TeamTableViewController: UITableViewController {
         
         cell.nameLabel.text = team.name
         cell.logoImageView.image = team.logo
-        cell.startsAtLabel.text = team.startsAt.description
+        cell.startsAtLabel.text = team.startsAt
 
         return cell
     }
@@ -96,15 +96,15 @@ class TeamTableViewController: UITableViewController {
     private func loadSampleTeams() {
         let logo1 = UIImage(named: "logo1")
         
-        guard let team1 = Team(id: 1, name: "Jaga", logo: logo1, startsAt: Date(timeIntervalSinceNow: 1)) else {
+        guard let team1 = Team(id: 1, name: "Jaga", logo: logo1, startsAt: "2017-09-11T18:00:00.000+02:00") else {
             fatalError("Unable to instantiate meal1")
         }
         
-        guard let team2 = Team(id: 2, name: "Legia", logo: logo1, startsAt: Date(timeIntervalSinceNow: 2)) else {
+        guard let team2 = Team(id: 2, name: "Legia", logo: logo1, startsAt: "2017-09-11T18:00:00.000+02:00") else {
             fatalError("Unable to instantiate meal1")
         }
         
-        guard let team3 = Team(id: 3, name: "Wisła", logo: logo1, startsAt: Date(timeIntervalSinceNow: 3)) else {
+        guard let team3 = Team(id: 3, name: "Wisła", logo: logo1, startsAt: "2017-09-11T18:00:00.000+02:00") else {
             fatalError("Unable to instantiate meal1")
         }
         

@@ -13,12 +13,19 @@ class Team: NSObject {
     var id: Int
     var name: String
     var logo: UIImage?
-    var startsAt: Date
+    var startsAt: String
     
-    init?(id: Int, name: String, logo: UIImage?, startsAt: Date) {
+    init?(id: Int, name: String, logo: UIImage?, startsAt: String) {
         self.id = id
         self.name = name
         self.logo = logo
-        self.startsAt = startsAt
+        
+        let dateString = startsAt
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        let dateFromString = formatter.date(from: dateString)
+        formatter.dateFormat = "dd-MM-yyyy, HH:mm"
+  
+        self.startsAt = formatter.string(from: dateFromString!)
     }
 }
