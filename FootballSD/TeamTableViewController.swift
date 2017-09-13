@@ -48,7 +48,7 @@ class TeamTableViewController: UITableViewController {
     }
     
     @IBAction func refresh(_ sender: Any) {
-        loadTeamsAPI()
+        loadTeams()
     }
 
     /*
@@ -114,7 +114,49 @@ class TeamTableViewController: UITableViewController {
         teams += [team1, team2, team3]
     }
     
-    private func loadTeamsAPI() {
-        
+    private func loadTeams() {
+        SpaceDigitalAPI.getFormations() {
+            teamsArr in
+            for team in teamsArr {
+                guard let id = team["team_id"] as? Int else {
+                    break
+                }
+                guard let name = team["team_name"] as? String else {
+                    break
+                }
+                guard let logoString = team["team_logo"] as? String else {
+                    break
+                }
+                guard let starts = team["starts_at"] as? String else {
+                    break
+                }
+//                print(id)
+//                print(name)
+//                print(logoString)
+//                print(starts)
+//                let newTeam = Team(id: id, name: name, logo: <#T##UIImage?#>, startsAt: starts)
+            }
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
