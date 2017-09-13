@@ -17,6 +17,10 @@
 		E98016371F696C3100CBF3FD /* SpaceDigitalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98016361F696C3100CBF3FD /* SpaceDigitalAPI.swift */; };
 		E9A1981C1F69BE4A00FA62FF /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A1981B1F69BE4A00FA62FF /* DateFormatter.swift */; };
 		E9A198201F69DFED00FA62FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A1981F1F69DFED00FA62FF /* Assets.xcassets */; };
+		E9A198221F69E84600FA62FF /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A198211F69E84600FA62FF /* FieldViewController.swift */; };
+		E9A198281F69EA6900FA62FF /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A198271F69EA6900FA62FF /* PlayerTableViewController.swift */; };
+		E9A1982A1F69EB0100FA62FF /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A198291F69EB0100FA62FF /* PlayerViewController.swift */; };
+		E9A1982C1F69EB4800FA62FF /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A1982B1F69EB4800FA62FF /* PlayerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		E98016361F696C3100CBF3FD /* SpaceDigitalAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceDigitalAPI.swift; sourceTree = "<group>"; };
 		E9A1981B1F69BE4A00FA62FF /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		E9A1981F1F69DFED00FA62FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9A198211F69E84600FA62FF /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
+		E9A198271F69EA6900FA62FF /* PlayerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerTableViewController.swift; path = ../PlayerTableViewController.swift; sourceTree = "<group>"; };
+		E9A198291F69EB0100FA62FF /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		E9A1982B1F69EB4800FA62FF /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,10 @@
 			children = (
 				E98016321F693A0E00CBF3FD /* TeamTableViewController.swift */,
 				E98016341F693AC000CBF3FD /* TeamTableViewCell.swift */,
+				E9A198211F69E84600FA62FF /* FieldViewController.swift */,
+				E9A198271F69EA6900FA62FF /* PlayerTableViewController.swift */,
+				E9A1982B1F69EB4800FA62FF /* PlayerTableViewCell.swift */,
+				E9A198291F69EB0100FA62FF /* PlayerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -175,6 +187,10 @@
 				E98016331F693A0E00CBF3FD /* TeamTableViewController.swift in Sources */,
 				E98016371F696C3100CBF3FD /* SpaceDigitalAPI.swift in Sources */,
 				E980161B1F6935A100CBF3FD /* AppDelegate.swift in Sources */,
+				E9A1982C1F69EB4800FA62FF /* PlayerTableViewCell.swift in Sources */,
+				E9A198221F69E84600FA62FF /* FieldViewController.swift in Sources */,
+				E9A198281F69EA6900FA62FF /* PlayerTableViewController.swift in Sources */,
+				E9A1982A1F69EB0100FA62FF /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
