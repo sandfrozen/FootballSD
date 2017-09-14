@@ -14,10 +14,12 @@ extension DateFormatter {
         let formatter = DateFormatter()
         
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
-        let dateFromString = formatter.date(from: string)
+        guard let dateFromString = formatter.date(from: string) else {
+            return ""
+        }
         
         formatter.dateFormat = "dd-MM-yyyy HH:mm"
-        return formatter.string(from: dateFromString!)
+        return formatter.string(from: dateFromString)
     }
     
     static func birthFormat(string: String) -> String {
@@ -29,10 +31,7 @@ extension DateFormatter {
         }
         
         formatter.dateFormat = "dd-MM-yyyy"
-        guard var formated:String? = formatter.string(from: dateFromString) else {
-            return ""
-        }
-        return formated!
+        return formatter.string(from: dateFromString)
     }
     
 }

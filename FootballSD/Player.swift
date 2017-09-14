@@ -98,6 +98,7 @@ class Player {
             myPoints = my_points
         }
         
+        
         guard let photoString = playerInArray["photo_url"] as? String else {
             os_log("Unable to decode the photo_url from Player JSON for a Player object.", log: OSLog.default, type: .debug)
             return nil
