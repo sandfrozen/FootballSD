@@ -99,5 +99,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FootballSD/SpaceDigitalAPI.swift"
+            timestampString = "527052553.991817"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "getPlayers(teamId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static FootballSD.SpaceDigitalAPI.getPlayers (teamId : Swift.Int) -&gt; ()"
+                  moduleName = "FootballSD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomek.buslowski/Workspace/FootballSD/FootballSD/SpaceDigitalAPI.swift"
+                  timestampString = "527050397.549278"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "617">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static FootballSD.SpaceDigitalAPI.(getPlayers (teamId : Swift.Int) -&gt; ()).(closure #1)"
+                  moduleName = "FootballSD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tomek.buslowski/Workspace/FootballSD/FootballSD/SpaceDigitalAPI.swift"
+                  timestampString = "527050397.551156"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

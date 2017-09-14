@@ -53,25 +53,25 @@ class Player {
             os_log("Unable to decode the name from Player JSON for a Player object.", log: OSLog.default, type: .debug)
             return nil
         }
-        guard let age = playerInArray["age"] as? Int else {
-            os_log("Unable to decode the age from Player JSON for a Player object.", log: OSLog.default, type: .debug)
-            return nil
+        var age: Int = 0
+        if let a = playerInArray["age"] as? Int {
+            age = a
         }
-        guard let birth = playerInArray["date_of_birth"] as? String else {
-            os_log("Unable to decode the starts_at from Player JSON for a Player object.", log: OSLog.default, type: .debug)
-            return nil
+        var birth: String = ""
+        if let date = playerInArray["date_of_birth"] as? String {
+            birth = date
         }
         guard let country = playerInArray["country"] as? String else {
             os_log("Unable to decode the country from Player JSON for a Player object.", log: OSLog.default, type: .debug)
             return nil
         }
-        guard let height = playerInArray["height"] as? Int else {
-            os_log("Unable to decode the height from Player JSON for a Player object.", log: OSLog.default, type: .debug)
-            return nil
+        var height: Int = 0
+        if let h = playerInArray["height"] as? Int {
+            height = h
         }
-        guard let weight = playerInArray["weight"] as? Int else {
-            os_log("Unable to decode the weight from Player JSON for a Player object.", log: OSLog.default, type: .debug)
-            return nil
+        var weight: Int = 0
+        if let w = playerInArray["weight"] as? Int {
+            weight = w
         }
         guard let shirtNumber = playerInArray["shirt_number"] as? Int else {
             os_log("Unable to decode the shirt_number from Player JSON for a Player object.", log: OSLog.default, type: .debug)
@@ -93,10 +93,11 @@ class Player {
             os_log("Unable to decode the points_avg from Player JSON for a Player object.", log: OSLog.default, type: .debug)
             return nil
         }
-        guard let mypoints = playerInArray["my_points"] as? Int else {
-            os_log("Unable to decode the my_points from Player JSON for a Player object.", log: OSLog.default, type: .debug)
-            return nil
+        var myPoints: Int = 0
+        if let my_points = playerInArray["my_points"] as? Int {
+            myPoints = my_points
         }
+        
         guard let photoString = playerInArray["photo_url"] as? String else {
             os_log("Unable to decode the photo_url from Player JSON for a Player object.", log: OSLog.default, type: .debug)
             return nil
@@ -105,6 +106,6 @@ class Player {
         let photoUrl = URL(string: "https://"+photoString)!
         let photo = try! UIImage(withContentsOfUrl: photoUrl)
         
-        self.init(id: id, name: name, age: age, birth: birth, country: country, height: height, weight: weight, shirtNumber: shirtNumber, position: position, lineupPosition: lineupPosition, lineupDesc: lineupDesc, pointsAvg: pointsAvg, myPoints: mypoints, photo: photo!)
+        self.init(id: id, name: name, age: age, birth: birth, country: country, height: height, weight: weight, shirtNumber: shirtNumber, position: position, lineupPosition: lineupPosition, lineupDesc: lineupDesc, pointsAvg: pointsAvg, myPoints: myPoints, photo: photo!)
     }
 }

@@ -24,10 +24,15 @@ extension DateFormatter {
         let formatter = DateFormatter()
         
         formatter.dateFormat = "yyyy-MM-dd"
-        let dateFromString = formatter.date(from: string)
+        guard let dateFromString = formatter.date(from: string) else {
+            return ""
+        }
         
         formatter.dateFormat = "dd-MM-yyyy"
-        return formatter.string(from: dateFromString!)
+        guard var formated:String? = formatter.string(from: dateFromString) else {
+            return ""
+        }
+        return formated!
     }
     
 }

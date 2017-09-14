@@ -44,23 +44,20 @@ class SpaceDigitalAPI {
             return players
         }
         
-        let semaphore = DispatchSemaphore(value: 0)
-        let session = URLSession.shared
-        session.dataTask(with: url) { (data, response, error) in
-            if let data = data {
-                do {
-                    guard let playersJSON = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject], let playersArr = playersJSON["players"] as? [[String: AnyObject]] else {
-                        os_log("Unable to decode the players from Players JSON.", log: OSLog.default, type: .debug)
-                        return
-                    }
-                    players = playersArr
-                } catch {
-                    print("Error in SpaceDigitalAPI.getPlayers: \(error)")
-                }
+        do {
+            var jsonFromHtml: String
+            let htmlBody = try String(contentsOf: url, encoding: .utf8)
+            jsonFromHtml = "{ " + htmlBody + " }"
+            
+            let data = jsonFromHtml.data(using: String.Encoding.utf8)
+            guard let teamsJSON = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: AnyObject], let teamsArr = teamsJSON["players"] as? [[String: AnyObject]] else {
+                os_log("Unable to decode the players from Players JSON.", log: OSLog.default, type: .debug)
+                return players
             }
-            semaphore.signal()
-            }.resume()
-        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+            players = teamsArr
+        } catch {
+            print("Error in SpaceDigitalAPI.getPlayers: \(error)")
+        }
         return players
     }
 }

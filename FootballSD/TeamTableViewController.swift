@@ -98,7 +98,7 @@ class TeamTableViewController: UITableViewController {
     //MARK: - Private Methods
     
     private func loadTeams() {
-        startLoadingAnimation()
+        startLoadingAnimation(activityIndicatior)
         
         SpaceDigitalAPI.getTeams() {
             teamsArray in
@@ -110,26 +110,26 @@ class TeamTableViewController: UITableViewController {
             }
         }
         
-        stopLoadingAnimation()
-    }
-    
-    private func startLoadingAnimation() {
-        activityIndicatior.center = self.view.center
-        activityIndicatior.hidesWhenStopped = true
-        activityIndicatior.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(activityIndicatior)
-        activityIndicatior.startAnimating()
-        UIApplication.shared.beginIgnoringInteractionEvents()
-    }
-    
-    private func stopLoadingAnimation() {
-        activityIndicatior.stopAnimating()
-        UIApplication.shared.endIgnoringInteractionEvents()
+        stopLoadingAnimation(activityIndicatior)
     }
 }
 
 
-
+extension UIViewController {
+    func startLoadingAnimation(_ indicator: UIActivityIndicatorView) {
+        indicator.center = self.view.center
+        indicator.hidesWhenStopped = true
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        self.view.addSubview(indicator)
+        indicator.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+    
+    func stopLoadingAnimation(_ indicator: UIActivityIndicatorView) {
+        indicator.stopAnimating()
+        UIApplication.shared.endIgnoringInteractionEvents()
+    }
+}
 
 
 

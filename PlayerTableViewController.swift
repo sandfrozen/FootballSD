@@ -16,8 +16,8 @@ class PlayerTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Team: " + (team?.name)!
-        //loadPlayers()
+        self.navigationItem.title = (team?.name)!
+        loadPlayers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,13 +44,24 @@ class PlayerTableViewController: UITableViewController {
         
         cell.nameLabel.text = player.name
         cell.avatarImageView.image = player.photo
-        cell.positionLabel.text = player.lineupDesc
+        cell.positionLabel.text = "Position: " + player.lineupDesc
         
         return cell
     }
     
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func refresh(_ sender: Any) {
+        // First clear actual list of players
+        players = [Player]()
+        
+        // Load teams from server
+        loadPlayers()
+        
+        // Reload Table Viee
+        tableView.reloadData()
     }
     
     func loadPlayers() {
