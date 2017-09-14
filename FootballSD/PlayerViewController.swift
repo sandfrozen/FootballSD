@@ -12,17 +12,32 @@ class PlayerViewController: UIViewController {
 
     var player: Player? = nil
     
-//    @IBOutlet weak var nameLabel: UILabel!
-//    @IBOutlet weak var avatarImageView: UIImageView!
-//    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var birthLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var wightLabel: UILabel!
+    @IBOutlet weak var shirtLabel: UILabel!
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet weak var pointsAvgLabel: UILabel!
+    @IBOutlet weak var myPointsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        nameLabel.text = (player?.name)!
-//        avatarImageView.image = player?.photo
-//        ageLabel.text = "Age: \(String(describing: player!.age))"
-        
+        nameLabel.text = (player?.name)!
+        avatarImageView.image = player?.photo
+        ageLabel.text = String(describing: player!.age)
+        birthLabel.text = player?.birth
+        countryLabel.text = player?.country
+        heightLabel.text = player?.height.description
+        wightLabel.text = player?.weight.description
+        shirtLabel.text = player?.shirtNumber.description
+        positionLabel.text = player?.lineupDesc
+        pointsAvgLabel.text = player?.pointsAvg.description
+        myPointsLabel.text = player?.myPoints.description
     }
 
     override func didReceiveMemoryWarning() {
