@@ -47,11 +47,6 @@ class Team: NSObject {
         }
         
         self.init(id: id, name: name, logo: logo!, startsAt: startsAt)
-        
-//        self.id = id
-//        self.name = name
-//        self.logo = logo
-//        self.startsAt = DateFormatter.polishFormat(string: startsAt)
     }
 }
 
@@ -62,5 +57,5 @@ extension UIImage {
         
         self.init(data: imageData)
     }
-    
+
 }

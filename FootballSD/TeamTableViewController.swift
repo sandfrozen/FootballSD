@@ -66,7 +66,6 @@ class TeamTableViewController: UITableViewController {
             guard let playerTableViewController = tabBarController.viewControllers?[1].childViewControllers[0] as? PlayerTableViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
-            print(playerTableViewController)
             guard let selectedTeamCell = sender as? TeamTableViewCell else {
                 fatalError("Unexpected sender: \(String(describing: sender))")
             }
@@ -102,9 +101,9 @@ class TeamTableViewController: UITableViewController {
         startLoadingAnimation()
         
         SpaceDigitalAPI.getTeams() {
-            teamsArr in
+            teamsArray in
             // For each team-array in teamsArr create the team object and add to teams list
-            for team in teamsArr {
+            for team in teamsArray {
                 if let newTeam = Team(teamInArray: team) {
                     self.teams.append(newTeam)
                 }

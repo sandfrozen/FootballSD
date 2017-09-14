@@ -17,6 +17,7 @@ class PlayerTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "Team: " + (team?.name)!
+        //loadPlayers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,16 +54,12 @@ class PlayerTableViewController: UITableViewController {
     }
     
     func loadPlayers() {
-        
-//        {
-//            teamsArr in
-//            // For each team-array in teamsArr create the team object and add to teams list
-//            for team in teamsArr {
-//                if let newTeam = Team(teamInArray: team) {
-//                    self.teams.append(newTeam)
-//                }
-//            }
-//        }
+        let id = (team?.id)!
+        let playersArray = SpaceDigitalAPI.getPlayers(teamId: id)
+        for player in playersArray {
+            if let newPlayer = Player(playerInArray: player) {
+                self.players.append(newPlayer)
+            }
+        }
     }
-
 }

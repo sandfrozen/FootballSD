@@ -223,11 +223,11 @@
             </objects>
             <point key="canvasLocation" x="77.599999999999994" y="142.57871064467767"/>
         </scene>
-        <!--Filed-->
+        <!--Field-->
         <scene sceneID="eA4-59-55M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QWm-MV-66A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Filed" image="filedIcon" id="ni7-R5-ZCc"/>
+                    <tabBarItem key="tabBarItem" title="Field" image="filedIcon" id="ni7-R5-ZCc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dKG-aq-rBK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

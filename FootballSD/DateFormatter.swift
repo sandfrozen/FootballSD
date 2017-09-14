@@ -20,4 +20,14 @@ extension DateFormatter {
         return formatter.string(from: dateFromString!)
     }
     
+    static func birthFormat(string: String) -> String {
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy-MM-dd"
+        let dateFromString = formatter.date(from: string)
+        
+        formatter.dateFormat = "dd-MM-yyyy"
+        return formatter.string(from: dateFromString!)
+    }
+    
 }
