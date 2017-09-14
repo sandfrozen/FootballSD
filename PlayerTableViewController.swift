@@ -15,7 +15,8 @@ class PlayerTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationItem.title = "Team: " + (team?.name)!
     }
 
     override func didReceiveMemoryWarning() {

@@ -60,13 +60,13 @@ class TeamTableViewController: UITableViewController {
             guard let tabBarController = segue.destination as? TabBarController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
-            guard let fieldViewController = tabBarController.viewControllers?[0].childViewControllers.first else {
+//            guard let fieldViewController = tabBarController.viewControllers?[0].childViewControllers[0] as? FieldViewController else {
+//                fatalError("Unexpected destination: \(segue.destination)")
+//            }
+            guard let playerTableViewController = tabBarController.viewControllers?[1].childViewControllers[0] as? PlayerTableViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
-            guard let playerTableViewController = tabBarController.viewControllers?[1].childViewControllers.first else {
-                fatalError("Unexpected destination: \(segue.destination)")
-            }
-            //print(playerTableViewController.team)
+            print(playerTableViewController)
             guard let selectedTeamCell = sender as? TeamTableViewCell else {
                 fatalError("Unexpected sender: \(String(describing: sender))")
             }
