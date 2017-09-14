@@ -49,7 +49,7 @@
                                     <outlet property="logoImageView" destination="Miy-Zc-fks" id="3jK-f6-gsC"/>
                                     <outlet property="nameLabel" destination="dsH-cc-5RP" id="RrO-Qo-Sw8"/>
                                     <outlet property="startsAtLabel" destination="cUQ-I4-pjA" id="tNK-qr-RfJ"/>
-                                    <segue destination="cBT-tQ-YbI" kind="showDetail" id="bS1-Nd-X6w"/>
+                                    <segue destination="cBT-tQ-YbI" kind="showDetail" identifier="TabBar" id="bS1-Nd-X6w"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -104,7 +104,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="b5i-Jy-qJm">
             <objects>
-                <tabBarController id="cBT-tQ-YbI" sceneMemberID="viewController">
+                <tabBarController id="cBT-tQ-YbI" customClass="TabBarController" customModule="FootballSD" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="GR3-GR-ajN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -123,19 +123,42 @@
         <scene sceneID="Ac9-2q-HoS">
             <objects>
                 <tableViewController id="iI7-pG-9yU" customClass="PlayerTableViewController" customModule="FootballSD" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IgO-J4-hJl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="IgO-J4-hJl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerTableViewCell" id="rAW-EF-ZIz" customClass="PlayerTableViewCell" customModule="FootballSD" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rAW-EF-ZIz" id="77U-57-fxz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZv-57-mdQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMm-DN-t2K">
+                                            <rect key="frame" x="58" y="28" width="309" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8i-6D-7px">
+                                            <rect key="frame" x="58" y="8" width="309" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="avatarImageView" destination="NZv-57-mdQ" id="5zX-d8-ONc"/>
+                                    <outlet property="nameLabel" destination="W8i-6D-7px" id="LZT-9N-XiE"/>
+                                    <outlet property="positionLabel" destination="yMm-DN-t2K" id="IYZ-wR-gbM"/>
                                     <segue destination="JLz-ns-6w3" kind="showDetail" id="2Ez-Tz-hZW"/>
                                 </connections>
                             </tableViewCell>
@@ -168,17 +191,6 @@
                     <view key="view" contentMode="scaleToFill" id="vLF-Jg-wgH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7u-3T-dfT">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Filed" image="filedIcon" id="TBG-Y8-bfg"/>
-                                    <tabBarItem title="Team" image="teamIcon" selectedImage="teamIcon" id="ru6-cp-mwL"/>
-                                </items>
-                            </tabBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Player" id="V1a-2j-FYS">

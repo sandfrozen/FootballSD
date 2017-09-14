@@ -23,9 +23,9 @@ class Player {
     var lineupDesc: String
     var pointsAvg: Int
     var myPoints: Int
-    var photoUrl: URL
+    var photo: UIImage
     
-    init(id: Int, name: String, age: Int, birth:Date, country: String, height: Int, weight: Int, shirtNumber: Int, position: String, lineupPosition: Int, lineupDesc: String, pointsAvg: Int, myPoints: Int, photoUrl: URL) {
+    init(id: Int, name: String, age: Int, birth:Date, country: String, height: Int, weight: Int, shirtNumber: Int, position: String, lineupPosition: Int, lineupDesc: String, pointsAvg: Int, myPoints: Int, photo: UIImage) {
         self.id = id
         self.name = name
         self.age = age
@@ -39,6 +39,6 @@ class Player {
         self.lineupDesc = lineupDesc
         self.pointsAvg = pointsAvg
         self.myPoints = myPoints
-        self.photoUrl = photoUrl
+        self.photo = photo
     }
 }

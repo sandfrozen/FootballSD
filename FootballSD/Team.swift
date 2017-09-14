@@ -16,40 +16,42 @@ class Team: NSObject {
     var logo: UIImage?
     var startsAt: String
     
-    init?(id: Int, name: String, logo: UIImage?, startsAt: String) {
+    init(id: Int, name: String, logo: UIImage, startsAt: String) {
         self.id = id
         self.name = name
         self.logo = logo
         self.startsAt = DateFormatter.polishFormat(string: startsAt)
     }
     
-    init?(teamInArray: [String: AnyObject]) {
+    convenience init?(teamInArray: [String: AnyObject]) {
         
         guard let id = teamInArray["team_id"] as? Int else {
-            os_log("Unable to decode the id for a Team JSON.", log: OSLog.default, type: .debug)
+            os_log("Unable to decode the id from Team JSON for a Team object.", log: OSLog.default, type: .debug)
             return nil
         }
         guard let name = teamInArray["team_name"] as? String else {
-            os_log("Unable to decode the team_name for a Team JSON.", log: OSLog.default, type: .debug)
+            os_log("Unable to decode the team_name from Team JSON for a Team object.", log: OSLog.default, type: .debug)
             return nil
         }
         guard let logoString = teamInArray["team_logo"] as? String else {
-            os_log("Unable to decode the team_logo for a Team JSON.", log: OSLog.default, type: .debug)
+            os_log("Unable to decode the team_logo from Team JSON for a Team object.", log: OSLog.default, type: .debug)
             return nil
         }
         
         let logoUrl = URL(string: "https://"+logoString)!
-        let logo = try? UIImage(withContentsOfUrl: logoUrl)
+        let logo = try! UIImage(withContentsOfUrl: logoUrl)
         
         guard let startsAt = teamInArray["starts_at"] as? String else {
-            os_log("Unable to decode the starts_at for a Team JSON.", log: OSLog.default, type: .debug)
+            os_log("Unable to decode the starts_at from Team JSON for a Team object.", log: OSLog.default, type: .debug)
             return nil
         }
         
-        self.id = id
-        self.name = name
-        self.logo = logo!
-        self.startsAt = DateFormatter.polishFormat(string: startsAt)
+        self.init(id: id, name: name, logo: logo!, startsAt: startsAt)
+        
+//        self.id = id
+//        self.name = name
+//        self.logo = logo
+//        self.startsAt = DateFormatter.polishFormat(string: startsAt)
     }
 }
 

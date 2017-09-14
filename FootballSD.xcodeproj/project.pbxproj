@@ -21,6 +21,7 @@
 		E9A198281F69EA6900FA62FF /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A198271F69EA6900FA62FF /* PlayerTableViewController.swift */; };
 		E9A1982A1F69EB0100FA62FF /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A198291F69EB0100FA62FF /* PlayerViewController.swift */; };
 		E9A1982C1F69EB4800FA62FF /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A1982B1F69EB4800FA62FF /* PlayerTableViewCell.swift */; };
+		E9A1982E1F69F37B00FA62FF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A1982D1F69F37B00FA62FF /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E9A198271F69EA6900FA62FF /* PlayerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerTableViewController.swift; path = ../PlayerTableViewController.swift; sourceTree = "<group>"; };
 		E9A198291F69EB0100FA62FF /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		E9A1982B1F69EB4800FA62FF /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		E9A1982D1F69F37B00FA62FF /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				E98016321F693A0E00CBF3FD /* TeamTableViewController.swift */,
 				E98016341F693AC000CBF3FD /* TeamTableViewCell.swift */,
+				E9A1982D1F69F37B00FA62FF /* TabBarController.swift */,
 				E9A198211F69E84600FA62FF /* FieldViewController.swift */,
 				E9A198271F69EA6900FA62FF /* PlayerTableViewController.swift */,
 				E9A1982B1F69EB4800FA62FF /* PlayerTableViewCell.swift */,
@@ -189,6 +192,7 @@
 				E980161B1F6935A100CBF3FD /* AppDelegate.swift in Sources */,
 				E9A1982C1F69EB4800FA62FF /* PlayerTableViewCell.swift in Sources */,
 				E9A198221F69E84600FA62FF /* FieldViewController.swift in Sources */,
+				E9A1982E1F69F37B00FA62FF /* TabBarController.swift in Sources */,
 				E9A198281F69EA6900FA62FF /* PlayerTableViewController.swift in Sources */,
 				E9A1982A1F69EB0100FA62FF /* PlayerViewController.swift in Sources */,
 			);

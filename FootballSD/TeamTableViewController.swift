@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class TeamTableViewController: UITableViewController {
     
@@ -48,6 +49,38 @@ class TeamTableViewController: UITableViewController {
         cell.startsAtLabel.text = "Starts at: " + team.startsAt
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch segue.identifier ?? "" {
+        case "TabBar":
+            os_log("Going to TabBar.", log: OSLog.default, type: .debug)
+            guard let tabBarController = segue.destination as? TabBarController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            guard let fieldViewController = tabBarController.viewControllers?[0].childViewControllers.first else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            guard let playerTableViewController = tabBarController.viewControllers?[1].childViewControllers.first else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            //print(playerTableViewController.team)
+            guard let selectedTeamCell = sender as? TeamTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedTeamCell) else {
+                fatalError("The selected cell is not begin displayed by the table:")
+            }
+            let selectedTeam = teams[indexPath.row]
+            playerTableViewController.team = selectedTeam
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
+            break
+        }
     }
     
     //MARK: - Actions
