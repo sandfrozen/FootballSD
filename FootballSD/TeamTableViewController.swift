@@ -56,7 +56,7 @@ class TeamTableViewController: UITableViewController {
         
         switch segue.identifier ?? "" {
         case "TabBar":
-            os_log("Going to TabBar.", log: OSLog.default, type: .debug)
+            //os_log("Going to TabBar.", log: OSLog.default, type: .debug)
             guard let tabBarController = segue.destination as? TabBarController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }

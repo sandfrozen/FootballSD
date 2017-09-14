@@ -159,7 +159,7 @@
                                     <outlet property="avatarImageView" destination="NZv-57-mdQ" id="5zX-d8-ONc"/>
                                     <outlet property="nameLabel" destination="W8i-6D-7px" id="LZT-9N-XiE"/>
                                     <outlet property="positionLabel" destination="yMm-DN-t2K" id="IYZ-wR-gbM"/>
-                                    <segue destination="JLz-ns-6w3" kind="showDetail" id="2Ez-Tz-hZW"/>
+                                    <segue destination="JLz-ns-6w3" kind="showDetail" identifier="PlayerInfo" id="2Ez-Tz-hZW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -196,7 +196,32 @@
                     <view key="view" contentMode="scaleToFill" id="vLF-Jg-wgH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0e-RC-1vG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghw-lX-oV8">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ghw-lX-oV8" firstAttribute="centerY" secondItem="a0e-RC-1vG" secondAttribute="centerY" id="5hG-Rj-bte"/>
+                                    <constraint firstItem="Ghw-lX-oV8" firstAttribute="centerX" secondItem="a0e-RC-1vG" secondAttribute="centerX" id="ADO-Ou-GEo"/>
+                                    <constraint firstItem="Ghw-lX-oV8" firstAttribute="leading" secondItem="a0e-RC-1vG" secondAttribute="leading" id="Nth-NN-HM8"/>
+                                    <constraint firstItem="Ghw-lX-oV8" firstAttribute="top" secondItem="a0e-RC-1vG" secondAttribute="top" id="PPa-wG-1YK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ghw-lX-oV8" secondAttribute="trailing" id="fGZ-QA-kgd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ghw-lX-oV8" secondAttribute="bottom" id="ui1-cw-jrz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a0e-RC-1vG" firstAttribute="leading" secondItem="vLF-Jg-wgH" secondAttribute="leading" id="0AN-sD-vcQ"/>
+                            <constraint firstItem="a0e-RC-1vG" firstAttribute="bottom" secondItem="8WJ-vV-Mw3" secondAttribute="top" id="CU4-Mq-SDt"/>
+                            <constraint firstAttribute="trailing" secondItem="a0e-RC-1vG" secondAttribute="trailing" id="KEy-EI-mx7"/>
+                            <constraint firstItem="a0e-RC-1vG" firstAttribute="top" secondItem="vLF-Jg-wgH" secondAttribute="top" id="sev-EJ-zyk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Player" id="V1a-2j-FYS">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="71j-EQ-IXY">

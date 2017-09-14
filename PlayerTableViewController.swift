@@ -49,6 +49,36 @@ class PlayerTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch segue.identifier ?? "" {
+        case "PlayerInfo":
+            
+            guard let destinationNavigationController = segue.destination as? UINavigationController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let playerViewController = destinationNavigationController.topViewController as? PlayerViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedPlayerCell = sender as? PlayerTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedPlayerCell) else {
+                fatalError("The selected cell is not begin displayed by the table:")
+            }
+            let selectedPlayer = players[indexPath.row]
+            playerViewController.player = selectedPlayer
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
+            break
+        }
+    }
+    
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

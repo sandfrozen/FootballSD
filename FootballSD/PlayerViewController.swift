@@ -10,10 +10,19 @@ import UIKit
 
 class PlayerViewController: UIViewController {
 
+    var player: Player? = nil
+    
+//    @IBOutlet weak var nameLabel: UILabel!
+//    @IBOutlet weak var avatarImageView: UIImageView!
+//    @IBOutlet weak var ageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+//        nameLabel.text = (player?.name)!
+//        avatarImageView.image = player?.photo
+//        ageLabel.text = "Age: \(String(describing: player!.age))"
+        
     }
 
     override func didReceiveMemoryWarning() {
