@@ -18,7 +18,7 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var birthLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var heightLabel: UILabel!
-    @IBOutlet weak var wightLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var shirtLabel: UILabel!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var pointsAvgLabel: UILabel!
@@ -33,7 +33,7 @@ class PlayerViewController: UIViewController {
         birthLabel.text = player?.birth
         countryLabel.text = player?.country
         heightLabel.text = player?.height.description
-        wightLabel.text = player?.weight.description
+        weightLabel.text = player?.weight.description
         shirtLabel.text = player?.shirtNumber.description
         positionLabel.text = player?.lineupDesc
         pointsAvgLabel.text = player?.pointsAvg.description
