@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Teams-->
+        <!--Football Clubs-->
         <scene sceneID="QXe-HK-B5W">
             <objects>
                 <tableViewController id="8UX-v7-80Q" customClass="TeamTableViewController" customModule="FootballSD" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,7 +67,7 @@
                             <outlet property="delegate" destination="8UX-v7-80Q" id="dIw-9p-AXS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Teams" id="2pd-JY-CWn">
+                    <navigationItem key="navigationItem" title="Football Clubs" id="2pd-JY-CWn">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="1hg-QP-gcx">
                             <connections>
                                 <action selector="refresh:" destination="8UX-v7-80Q" id="t9q-g6-pB2"/>

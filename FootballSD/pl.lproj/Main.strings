@@ -3,7 +3,7 @@
 "0uJ-3G-MoQ.text" = "Punkty:";
 
 /* Class = "UINavigationItem"; title = "Teams"; ObjectID = "2pd-JY-CWn"; */
-"2pd-JY-CWn.title" = "Drużyny";
+"2pd-JY-CWn.title" = "Kluby piłkarskie";
 
 /* Class = "UILabel"; text = "Starts at:"; ObjectID = "6gb-s7-lcy"; */
 "6gb-s7-lcy.text" = "Początek:";
@@ -15,7 +15,7 @@
 "8GJ-eI-2e2.text" = "Data urodzenia:";
 
 /* Class = "UILabel"; text = "Shirt number:"; ObjectID = "DBg-mS-za9"; */
-"DBg-mS-za9.text" = "Numer na koszulce:";
+"DBg-mS-za9.text" = "Numer koszulki:";
 
 /* Class = "UILabel"; text = "Position:"; ObjectID = "Fi6-nK-0MB"; */
 "Fi6-nK-0MB.text" = "Pozycja:";
@@ -90,4 +90,4 @@
 //"yMm-DN-t2K.text" = "Position Name";
 
 /* Class = "UILabel"; text = "My Points:"; ObjectID = "zsA-dS-Gqq"; */
-"zsA-dS-Gqq.text" = "Przyznane  punkty:";
+"zsA-dS-Gqq.text" = "Moje punkty:";

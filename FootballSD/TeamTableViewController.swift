@@ -100,13 +100,10 @@ class TeamTableViewController: UITableViewController {
     private func loadTeams() {
         startLoadingAnimation(activityIndicatior)
         
-        SpaceDigitalAPI.getTeams() {
-            teamsArray in
-            // For each team-array in teamsArr create the team object and add to teams list
-            for team in teamsArray {
-                if let newTeam = Team(teamInArray: team) {
-                    self.teams.append(newTeam)
-                }
+        let teamsArray = SpaceDigitalAPI.getTeams()
+        for team in teamsArray {
+            if let newTeam = Team(teamInArray: team) {
+                self.teams.append(newTeam)
             }
         }
         
