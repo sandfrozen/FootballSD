@@ -1,0 +1,87 @@
+
+/* Class = "UINavigationItem"; title = "Teams"; ObjectID = "2pd-JY-CWn"; */
+"2pd-JY-CWn.title" = "Zespoły";
+
+/* Class = "UILabel"; text = "Country:"; ObjectID = "3Mw-Sb-rse"; */
+"3Mw-Sb-rse.text" = "Kraj:";
+
+/* Class = "UILabel"; text = "Points AVG:"; ObjectID = "F84-ny-vrJ"; */
+"F84-ny-vrJ.text" = "Średnia:";
+
+/* Class = "UITabBarItem"; title = "Players"; ObjectID = "H0l-G6-ZKv"; */
+"H0l-G6-ZKv.title" = "Zawodnicy";
+
+/* Class = "UINavigationItem"; title = "Field"; ObjectID = "Iuo-0e-99s"; */
+"Iuo-0e-99s.title" = "Boisko";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "J9t-88-JsB"; */
+"J9t-88-JsB.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "K5c-wW-3S2"; */
+"K5c-wW-3S2.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LpW-fK-THO"; */
+"LpW-fK-THO.text" = "Label";
+
+/* Class = "UILabel"; text = "My points:"; ObjectID = "MTn-MB-UIE"; */
+"MTn-MB-UIE.text" = "Punkty:";
+
+/* Class = "UILabel"; text = "Position:"; ObjectID = "Mgd-Db-nJr"; */
+"Mgd-Db-nJr.text" = "Pozycja:";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "PsL-5C-EO0"; */
+"PsL-5C-EO0.text" = "Imie";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RoY-2X-Z9t"; */
+"RoY-2X-Z9t.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Rzg-Td-Kcb"; */
+"Rzg-Td-Kcb.text" = "Label";
+
+/* Class = "UILabel"; text = "Birth:"; ObjectID = "TYx-SH-KfV"; */
+"TYx-SH-KfV.text" = "Data urodzenia:";
+
+/* Class = "UINavigationItem"; title = "Player"; ObjectID = "V1a-2j-FYS"; */
+"V1a-2j-FYS.title" = "Zawodnik";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "V2k-B3-Wy9"; */
+"V2k-B3-Wy9.text" = "Label";
+
+/* Class = "UILabel"; text = "Height:"; ObjectID = "Vvr-Bd-8e2"; */
+"Vvr-Bd-8e2.text" = "Wysokość:";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "W8i-6D-7px"; */
+"W8i-6D-7px.text" = "Imie";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "asa-gK-Ud7"; */
+"asa-gK-Ud7.text" = "Label";
+
+/* Class = "UILabel"; text = "Starts At"; ObjectID = "6gb-s7-lcy"; */
+"6gb-s7-lcy.text" = "Początek:";
+
+/* Class = "UILabel"; text = "Team Name"; ObjectID = "dsH-cc-5RP"; */
+"dsH-cc-5RP.text" = "Nazwa drużyny";
+
+/* Class = "UILabel"; text = "Weight:"; ObjectID = "ek5-4v-TTR"; */
+"ek5-4v-TTR.text" = "Waga:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fxj-1K-MhK"; */
+"fxj-1K-MhK.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Team"; ObjectID = "gfH-xV-XZd"; */
+"gfH-xV-XZd.title" = "Drużyna";
+
+/* Class = "UILabel"; text = "Shirt number:"; ObjectID = "lL3-ks-AFJ"; */
+"lL3-ks-AFJ.text" = "Numer:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mUS-GW-ahN"; */
+"mUS-GW-ahN.text" = "Label";
+
+/* Class = "UILabel"; text = "Age:"; ObjectID = "n6z-Ie-fq5"; */
+"n6z-Ie-fq5.text" = "Wiek:";
+
+/* Class = "UITabBarItem"; title = "Field"; ObjectID = "ni7-R5-ZCc"; */
+"ni7-R5-ZCc.title" = "Boisko";
+
+/* Class = "UILabel"; text = "Position"; ObjectID = "gdo-Af-8vy"; */
+"gdo-Af-8vy.text" = "Pozycja:";

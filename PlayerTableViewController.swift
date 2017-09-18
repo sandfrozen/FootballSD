@@ -44,7 +44,7 @@ class PlayerTableViewController: UITableViewController {
         
         cell.nameLabel.text = player.name
         cell.avatarImageView.image = player.photo
-        cell.positionLabel.text = "Position: " + player.lineupDesc
+        cell.positionLabel.text = player.lineupDesc
         
         return cell
     }

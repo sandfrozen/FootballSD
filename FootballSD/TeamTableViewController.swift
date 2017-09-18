@@ -46,7 +46,7 @@ class TeamTableViewController: UITableViewController {
         
         cell.nameLabel.text = team.name
         cell.logoImageView.image = team.logo
-        cell.startsAtLabel.text = "Starts at: " + team.startsAt
+        cell.startsAtLabel.text = team.startsAt
 
         return cell
     }
